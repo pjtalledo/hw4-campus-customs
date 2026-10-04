@@ -1,0 +1,127 @@
+.auth-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: calc(100vh - 80px);
+  background: linear-gradient(135deg, var(--bg-light) 0%, #ffffff 100%);
+  padding: 2rem;
+}
+
+.auth-form-container {
+  background: white;
+  padding: 3rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+}
+
+.auth-form-container h1 {
+  color: var(--primary-color);
+  text-align: center;
+  margin: 0 0 2rem 0;
+  font-size: 2rem;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  color: var(--primary-color);
+  font-weight: 600;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+.form-group input {
+  padding: 0.75rem;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+  font-family: inherit;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(0, 53, 107, 0.1);
+}
+
+.submit-button {
+  padding: 0.75rem;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 0.5rem;
+}
+
+.submit-button:hover {
+  background-color: var(--primary-light);
+}
+
+.auth-link {
+  text-align: center;
+  color: #666;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.auth-link a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.auth-link a:hover {
+  color: var(--primary-light);
+}
+
+.error-message {
+  background-color: #ffebee;
+  color: #c62828;
+  padding: 0.75rem;
+  border-radius: 4px;
+  margin-bottom: 1.5rem;
+  border-left: 4px solid #c62828;
+  font-size: 0.95rem;
+}
+
+.success-message {
+  color: #2e7d32;
+  text-align: center;
+  font-size: 1.05rem;
+}
+
+.submit-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.submit-button:disabled:hover {
+  background-color: #ccc;
+}
+
+@media (max-width: 768px) {
+  .auth-form-container {
+    padding: 2rem;
+  }
+
+  .auth-form-container h1 {
+    font-size: 1.5rem;
+  }
+}

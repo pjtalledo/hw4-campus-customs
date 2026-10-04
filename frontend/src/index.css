@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Core Yale/Campus Customs identity */
+  --primary-color: #00356b;
+  --primary-light: #1e5ba8;
+  --primary-dark: #001f3f;
+  --accent-color: #c7b14e;
+  --accent-light: #e0c855;
+  --accent-dark: #a08f36;
+
+  --text-dark: #1b2430;
+  --text-light: #636d7a;
+  --bg-light: #f7f6f2;
+  --bg-white: #ffffff;
+  --border-color: #e3e1da;
+
+  --shadow: 0 2px 12px rgba(0, 20, 48, 0.08);
+  --shadow-lg: 0 10px 32px rgba(0, 20, 48, 0.14);
+  --shadow-gold: 0 6px 20px rgba(199, 177, 78, 0.35);
+
+  --radius: 10px;
+  --radius-sm: 6px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --font-display: 'Fraunces', Georgia, serif;
+  --font-body: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  scroll-behavior: smooth;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+body {
+  color: var(--text-dark);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: inherit;
+}
+
+a, button {
+  transition: color 0.25s var(--ease), background-color 0.25s var(--ease),
+              transform 0.25s var(--ease), box-shadow 0.25s var(--ease), border-color 0.25s var(--ease);
+}
+
+:focus-visible {
+  outline: 2px solid var(--accent-color);
+  outline-offset: 2px;
+}
+
+/* Memorable element: a faint repeating Yale "Y" crest watermark utility,
+   used sparingly behind hero/header sections for a storefront identity
+   rather than a generic template look. */
+.yale-crest-bg {
+  position: relative;
+  isolation: isolate;
+}
+
+.yale-crest-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-image: radial-gradient(circle at 15% 20%, rgba(199, 177, 78, 0.10) 0, transparent 40%),
+    radial-gradient(circle at 85% 80%, rgba(199, 177, 78, 0.08) 0, transparent 45%);
+  pointer-events: none;
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
